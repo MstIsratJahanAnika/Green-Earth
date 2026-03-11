@@ -94,7 +94,7 @@ function displayAllTrees(trees){
     trees.forEach((tree) => {
         console.log(tree);
         const treeCard = document.createElement("div");
-        treeCard.className ="card bg-white shadow-sm";
+        treeCard.className =`card bg-white shadow-sm border-b-3 ${tree.price < 500 ? "border-red-500": "border-green-500"}`;
         treeCard.innerHTML = ` 
                         <figure>
                             <img src="${tree.image}"
