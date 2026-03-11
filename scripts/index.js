@@ -112,7 +112,7 @@ function displayAllTrees(trees){
                             <!-- badge -->
                             <div class ="flex justify-between items-center">
                                 <div class="badge badge-soft text-[#15803D] border-none rounded-[400px] bg-[#DCFCE7]">${tree.category}</div>
-                                <h2>$${tree.price}</h2>
+                                <h2 class = "font-semibold ${tree.price < 500 ? "text-[#cb0502]" : "text-[#15803D]"}">$${tree.price}</h2>
                             </div>
 
                             <div class="flex justify-center items-center">
@@ -128,7 +128,7 @@ const cartItemsContainer = document.getElementById("cart-items");
 
 function addToCart(id, name, price){
     // cartContainer.innerHTML = "";
-    const existingItem = cart.find(item => item.id === id);
+    const existingItem = cart.find(item => item.id === id); //single element khuje ber kore ana
         if(existingItem){
             existingItem.quantity += 1;
         }
@@ -150,7 +150,7 @@ function updateCart(){
     if(cart.length === 0){
         emptyCart.classList.remove("hidden");
         totalPrice.textContent = `$${0}`;
-        return;
+        return; //nicher kaj er dorkar nei
     }
     emptyCart.classList.add("hidden");
 
