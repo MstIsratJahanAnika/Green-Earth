@@ -20,22 +20,25 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
+<body class="bg-[#DCFCE7]">
 
-    <main class="bg-[#DCFCE7]">
+    <main>
         <h1 class="font-semibold text-[32px] text-center">Choose Your Trees</h1>
 
-        <section class="grid grid-cols-12 gap-7.5">
+        <section class="grid grid-cols-12 gap-7.5 min-h-screen">
 
             <!-- categories div -->
             <div class="bg-[#DCFCE7] card card-body shadow-sm col-span-3 text-center ">
                 <h2 class="font-semibold text-[20px]">Categories</h2>
-                <div class="sticky top-2">
-                    <button id="allTreesBtn" class="btn btn-active bg-[#15803D] text-white w-full">All Trees</button>
-                    <div id="Categories-container">
-                        <!-- all categories will load here dynamically  -->
+                <!-- <div class="sticky top-2"> -->
+                    <div class="sticky top-4">
+                        <button id="allTreesBtn" class="btn btn-active bg-[#15803D] text-white w-full">All
+                            Trees</button>
+                        <div id="Categories-container">
+                            <!-- all categories will load here dynamically  -->
+                        </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
 
             <!-- all trees div -->
@@ -53,12 +56,13 @@
 
             <!-- add to cart div -->
             <div id="cart-container" class="space-y-4 col-span-3">
-                <div class="bg-white card card-body shadow">
-                    <h2 class="font-semibold text-[20px]">Your Cart</h2>
+                <!-- <div class="sticky top-4"> -->
+                    <div class="bg-white card card-body shadow ">
+                        <h2 class="font-semibold text-[20px]">Your Cart</h2>
 
-                    <!-- cart items -->
-                    <div id="cart-items" class="space-y-4">
-                        <!-- <div class="card card-body shadow-sm bg-slate-100">
+                        <!-- cart items -->
+                        <div id="cart-items" class="space-y-4">
+                            <!-- <div class="card card-body shadow-sm bg-slate-100">
                             <div class="flex justify-between items-center">
                                 <div>
                                     <h3>Name</h3>
@@ -68,20 +72,21 @@
                             </div>
                             <p class="text-right font-semibold text-xl">$500</p>
                         </div> -->
-                    </div>
+                        </div>
 
-                    <!-- empty cart -->
-                    <div id="empty-cart" class="text-center py-4">
-                        <p class="text-[16px] text-[#1F2937]/50 font-semibold">Your Cart is Empty</p>
-                        <p class="text-[16px] text-[#1F2937]/50 font-semibold">Add Trees to Get Started</p>
-                    </div>
+                        <!-- empty cart -->
+                        <div id="empty-cart" class="text-center py-4">
+                            <p class="text-[16px] text-[#1F2937]/50 font-semibold">Your Cart is Empty</p>
+                            <p class="text-[16px] text-[#1F2937]/50 font-semibold">Add Trees to Get Started</p>
+                        </div>
 
-                    <!-- total amount -->
-                    <div class="flex justify-between items-center bg-green-50 rounded-lg p-4 my-3 font-bold">
-                        <span>Total: </span>
-                        <span id="total-price">$0</span>
+                        <!-- total amount -->
+                        <div class="flex justify-between items-center bg-green-50 rounded-lg p-4 my-3 font-bold">
+                            <span>Total: </span>
+                            <span id="total-price">$0</span>
+                        </div>
                     </div>
-                </div>
+                <!-- </div> -->
             </div>
             </div>
         </section>

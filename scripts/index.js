@@ -155,6 +155,8 @@ function updateCart(){
     emptyCart.classList.add("hidden");
 
     console.log(cart);
+
+    // ekhane call-back function use kora hoyeche
     cart.forEach(item =>{
         total = total + (item.price * item.quantity);
         const cartItem = document.createElement("div");
